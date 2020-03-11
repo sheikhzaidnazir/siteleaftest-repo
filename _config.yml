@@ -7,7 +7,7 @@ collections:
     output: true
   clients:
     title: Our Clients
-    output: true
+    output: false
   team:
     title: Our Team
     output: true
