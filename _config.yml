@@ -10,7 +10,7 @@ collections:
     output: false
   team:
     title: Our Team
-    output: true
+    output: false
   work:
     title: Our Work
     output: true
