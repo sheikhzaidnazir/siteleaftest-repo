@@ -12,7 +12,7 @@ take-away-image-alt: Top 3 reasons why we use slack and not email in our marketi
 comments: true
 meta-keywords: Slack best practices, How to use slack,  Slack for Business, Slack
   team communication
-author: John Malloy
+author: Ifrah Bashir
 author-image: "/images/author-waseem-bashir.png"
 facebook-link: https://www.facebook.com/Apexure/
 instagram-link: https://www.instagram.com/waseembashir/
