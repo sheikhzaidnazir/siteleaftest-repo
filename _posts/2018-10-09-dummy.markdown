@@ -3,13 +3,16 @@ title: Dummy
 date: 2018-10-09 12:16:00 Z
 tags:
 - others
-author: Waseem Bashir
 featured-image: "/uploads/top-reasons-why-we-use-slack.png"
 featured-image-alt: Top 3 reasons why we use slack and not email in our marketing
   agency
 take-away-image: "/uploads/3-reasons-why-we-use-slack.jpg"
 take-away-image-alt: Top 3 reasons why we use slack and not email in our marketing
   agency
+comments: true
+meta-keywords: Slack best practices, How to use slack,  Slack for Business, Slack
+  team communication
+author: John Malloy
 author-image: "/images/author-waseem-bashir.png"
 facebook-link: https://www.facebook.com/Apexure/
 instagram-link: https://www.instagram.com/waseembashir/
@@ -18,9 +21,6 @@ author-description: Founder & CEO  of Apexure, Waseem worked in London’s Finan
   Industry. He has worked on trading floors in BNP Paribas and Trafigura, developing
   complex business systems. Waseem loves working with Startups and combines data and
   design to create improved User Experiences.
-comments: true
-meta-keywords: Slack best practices, How to use slack,  Slack for Business, Slack
-  team communication
 description: As an agency, we love Slack. It makes our work life more manageable and
   effective. Using the tool for a few years, we have learned many lessons and share
   the best practices for using Slack for business.
