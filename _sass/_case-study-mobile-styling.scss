@@ -1,0 +1,215 @@
+/*************
+MEDIA QUERIES
+*************/
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+    #case_study{
+        .main_wrapper{
+            .wrapper_left{
+                flex-basis: 100%;
+            }
+            .wrapper_right{
+                flex-basis: 100%;
+                .case_study_content{
+                    h2,h3,h4,h5,h6{
+                        padding-top: 20px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .case_study_image{
+            width: 100%;
+        }
+    }
+    
+    #our_challenge{
+        .main_wrapper{
+            .wrapper_left{
+                flex-basis: 100%;
+            }
+            .wrapper_right{
+                flex-basis: 100%;
+                .challenge_content{
+                    h2,h3,h4,h5,h6{
+                        padding-top: 20px;
+                    }
+                    p{
+                        font-size: 16px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+        .challenge_bottom_wrapper{
+            .left_content{
+                flex-basis: 100%;
+                text-align: left;
+            }
+            .right_image{
+                flex-basis: 100%;
+            }
+        }
+    }
+    
+    #our_solution{
+        .main_wrapper{
+            .wrapper_left{
+                flex-basis: 100%;
+            }
+            .wrapper_right{
+                flex-basis: 100%;
+                .our_solution_content{
+                    h2,h3,h4,h5,h6{
+                        padding-top: 20px;
+                        &:first-child{
+                            padding-top: 0;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .solution_image_wrapper{
+            .solution_image{
+                h2{
+                    padding: 5%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    #conclusion{
+        .main_wrapper{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .wrapper_left{
+                flex-basis: 100%;
+            }
+            .wrapper_right{
+                flex-basis: 100%;
+                .conclusion_content{
+                    h2,h3,h4,h5,h6{
+                        padding-top: 20px;
+                        &:first-child{
+                            padding-top: 0;
+                        }
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    #case_study{
+        .main_wrapper{
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            .wrapper_left{
+                flex-basis: 100%;
+            }
+            .wrapper_right{
+                flex-basis: 100%;
+                .case_study_content{
+                    p{
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .case_study_image {
+            h6{
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+    }
+    
+    #our_challenge{
+        .main_wrapper{
+            .wrapper_right{
+                .challenge_content{
+                    p{
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+        .challenge_bottom_wrapper{
+            .left_content{
+                h6{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    
+    #our_solution{
+        .main_wrapper{
+            .wrapper_right{
+                .our_solution_content{
+                    p{
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    #solution_image_mobile{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 50px 0 20px 0;
+        min-height: 400px;
+        position: relative;
+        .overlay{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .4;
+            z-index: 1;
+            background-color: $door3Blue;
+            transform: rotate(-360deg);
+        }
+        h2{
+            position: relative;
+            z-index: 20;
+        }
+    }
+    
+    #conclusion{
+        .main_wrapper{
+            .wrapper_right{
+                .conclusion_content{
+                    p{
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 575.98px) {
+
+}

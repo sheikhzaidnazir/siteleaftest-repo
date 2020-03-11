@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+  <body>
+    <section id="main_banner">
+      {% include header.html %}
+      <div class="banner_outer_wrapper d-flex align-items-center"> 
+        <div class="container container-lg">
+          <div class="row">
+            <div class="banner_inner_wrapper col-12">
+              <div class="banner_alignment d-flex  align-items-center">
+                <div class="banner_left">
+                  <h1 class="text-white">{{page.banner-heading}}</h1>
+                  <h6 class="text-white">{{page.banner-subheading}}</h6>
+                </div>
+                <div class="banner_right">
+                  <img src="{{site.baseurl}}{{page.banner-image}}" alt="{{page.banner-image-alt}}" class="img-fluid">
+                </div>
+               
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div> 
+    </section>  
+
+    <section id="main_services" class="p_t_100 p_b_100 p_m_t_50 p_m_b_50">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h3 class="p_m_b_70">{{ page.services-heading }}</h3>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <ul class="services_list">
+              {% if page.is-service-1 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                  <h4>{{ page.services-1-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-1-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-2 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-2-link }}">
+                  <h4>{{ page.services-2-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-2-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %}
+              {% if page.is-service-3 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-3-link }}">
+                  <h4>{{ page.services-3-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-3-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-4 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-4-link }}">
+                  <h4>{{ page.services-4-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-4-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-5 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-5-link }}">
+                  <h4>{{ page.services-5-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-5-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hp_about_us" style="background-image: url({{site.baseurl}}{{ page.about-us-image }});">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h3 class="text-white"> {{page.about-us-heading}} </h3>
+            <h5 class="text-white"> {{ page.about-us-subheading }} </h5>
+            <div class="about_us_cta p_t_20">
+              <a href="{{site.baseurl}}{{ page.about-us-cta-link }}">
+                {{page.about-us-cta-heading}}
+                <img src="{{site.baseurl}}/images/arrow-right-white.svg" alt="arrow-right-white" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="hp_about_us_mobile" class="show_from_mobile">
+      <div class="container-fluid">
+        <div class="row">
+          <img src="{{site.baseurl}}{{page.about-us-mobile-image}}" alt="{{page.about-us-mobile-img-alt}}" class="img-fluid">
+        </div>
+      </div>
+    </section>
+
+    {% include clients.html %}
+
+    <section id="hp_form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-white"> {{ page.form-heading }} </h2>
+            <h5 class="text-white">{{ page.form-subheading }}</h5>
+          </div>
+          <div class="col-md-6">
+            {% assign i = 0 %}
+            {% for mega-guide-repeat-description in page.mega-guide-repeat-description %}
+                {% assign i = i | plus:1 %}
+                <div class="">
+                  <div class="center_content">
+                     <p>{{ mega-guide-repeat-description | markdownify }} </p>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  {% include scripts.html %}
+  {% include footer.html %}
+  </body>
+
+</html> 

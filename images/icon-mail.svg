@@ -1,0 +1,6 @@
+<svg id="icon-mail" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="mail_outline-24px">
+    <path id="Path" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Shape" d="M18,16H2a2,2,0,0,1-2-2L.01,2A2,2,0,0,1,2,0H18a2,2,0,0,1,2,2V14A2,2,0,0,1,18,16ZM2,4V14H18V4L10,9ZM2,2l8,5,8-5Z" transform="translate(2 4)" fill="#0152bc"/>
+  </g>
+</svg>

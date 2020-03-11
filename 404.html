@@ -1,0 +1,54 @@
+---
+title: Page Not Found | DOOR3
+permalink: "/404.html"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+  <body>
+  {% include google-tag-manager.html %}
+  {% include header.html %}
+  <section id="header_wrapper" class="header_wrapper_error" style="background-image: url(/images/thankyou-banner.jpg);">
+    <div class="general_header_inner_wrapper"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="main_banner banner_heading_error">
+              <h3>OOPS! Looks like the page you’re looking for no longer exists</h3>
+              <h1>404</h1>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div> 
+  </section> 
+
+  <section id="go_back_homepage">
+    <div class="outer_wrapper">
+      <div class="inner_wrapper">
+        <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4>Don’t worry. Since you’re valuable to us, we will bring you back to safety. </h4>
+          </div>    
+        </div>
+        <div class="buttons d-md-flex justify-content-center">
+         <div class="go_back_button">
+            <a href="{{site.baseurl}}">Go back to Homepage</a>
+          </div>
+         <!--  <div class="view_our_work_button">
+            <a href="{{site.baseurl}}">View Our Work</a>
+          </div>  --> 
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+    {% include javascript_core.html %}
+    {% include footer.html %}     
+  </body>
+</html> 

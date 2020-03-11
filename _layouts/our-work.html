@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+  <body>
+    <section id="page_banner_white_header" >
+      {% include header.html %}
+      <div class="banner_outer_wrapper d-flex align-items-center" style="background-image: url({{site.baseurl}}{{ page.banner-image }});"> 
+        <div class="container container-lg">
+          <div class="row">
+            <div class="banner_inner_wrapper col-md-6 col-lg-6 offset-md-6">
+              <div class="banner_alignment d-flex  align-items-center">
+                <div class="banner_left">
+                  <h6 class="text-white">{{page.banner-top-heading}}</h6>
+                  <h1 class="text-white">{{page.banner-heading}}</h1>
+                  <h6 class="text-white">{{page.banner-subheading}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div> 
+    </section> 
+    <section id="banner_mobile" class="show_from_mobile">
+        <div class="container-fluid">
+          <div class="row">
+            <img src="{{site.baseurl}}{{page.banner-mobile-image}}" alt="{{page.banner-image-alt}}" class="img-fluid">
+          </div>
+        </div>
+    </section> 
+
+    <section id="our_work" class="p_t_50 p_b_50">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="top_content">
+                        <h2> {{page.our-work-heading}} </h2>
+                        <h5> {{page.our-work-subheading}} </h5>
+                    </div>
+                    <ul id="ul_large_left">
+                    </ul>
+                    
+                    <ul id="ul_large_right">
+
+                    </ul>
+                    <ul id="ul_equal" class="d-flex">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work_testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="testimonial_wrapper d-flex">
+                        <div class="testimonial_content">
+                            <h3 class="text-white">
+                                {{ page.testimonial-content }}
+                            </h3>
+                        </div>
+                        <div class="testimonial_by text-white">
+                            {{ page.testimonial-by-description | markdownify }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hp_form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-white"> {{ page.form-heading }} </h2>
+            <h5 class="text-white">{{ page.form-subheading }}</h5>
+          </div>
+          <div class="col-md-6">
+            {% assign i = 0 %}
+            {% for mega-guide-repeat-description in page.mega-guide-repeat-description %}
+                {% assign i = i | plus:1 %}
+                <div class="">
+                  <div class="center_content">
+                     <p>{{ mega-guide-repeat-description | markdownify }} </p>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="postsTi">
+
+    </section>
+    <script>
+      $( document ).ready(function() {
+        $.getJSON("/work.json", function(data) {	
+            console.log(data);
+            var totalPosts = data.length;
+            var firstCount = 3;
+            var delayTime = 0;
+            var secCount = 6;
+            for(i = 0; i< firstCount; i++){
+              delayTime = delayTime + 1;
+              postData = retrieveData(data, delayTime);
+              $( '#ul_large_left' ).append(postData);
+            }
+            $('#ul_large_left li:last-child').after(`<div class="clearfix"></div>`);
+            for(i >= firstCount; i< secCount; i++){
+              delayTime = delayTime + 1;
+              postData = retrieveDataSecond(data, delayTime);
+              $( '#ul_large_right' ).append(postData);
+            }
+            $('#ul_large_right li:last-child').after(`<div class="clearfix"></div>`);
+
+            for(i >= secCount; i< totalPosts; i++){
+              postData = retrieveDataAll(data, delayTime);
+              $( '#ul_equal' ).append(postData);
+            }
+             
+	       	  
+         });
+         
+         function retrieveData(posts, delayTime){
+              var html = "";
+              //  html += '<li class="animated  fast fadeInUp delay-'+delayTime+'s">';
+               html += '<li>'; 
+               html += '<div class="inner_wrapper">';
+               html += '<div class="work_wrapper_padding">';
+               html += '<h6 class="text-white">' + posts[i].maintags + '</h6>' ; 
+               html += '<h5 class="text-white">' + posts[i].title + '</h5>' ; 
+               html += '<a href="{{site.baseurl}} '+posts[i].link+ '">'; 
+               html += '<img src="{{site.baseurl}}'+posts[i].img +'" class="img-fluid" alt=" '+posts[i].alt+'">';
+               html += '</a>'
+               html += '</div>';
+               html += '</div>';
+               html += '</a>'
+               html += '</li>';
+               
+               return html;
+         }
+         function retrieveDataSecond(posts, delayTime){
+               var html = "";
+              //  html += '<li class="animated fast fadeInUp delay-'+delayTime+'s">';
+               html += '<li>';
+               html += '<div class="inner_wrapper">';
+               html += '<div class="work_wrapper_padding">';
+               html += '<h6 class="text-white">' + posts[i].maintags + '</h6>' ; 
+               html += '<h5 class="text-white">' + posts[i].title + '</h5>' ; 
+               html += '<a href="{{site.baseurl}} '+posts[i].link+ '">'; 
+               html += '<img src="{{site.baseurl}}'+posts[i].img +'" class="img-fluid" alt=" '+posts[i].alt+'">';
+               html += '</a>'
+               html += '</div>';
+               html += '</div>';
+               html += '</a>'
+               html += '</li>';
+               return html;
+         }
+
+         function retrieveDataAll(posts, delayTime){
+               var html = "";
+              //  html += '<li class="animated fast fadeInUp delay-'+delayTime+'s">';
+               html += '<li>';
+               html += '<div class="inner_wrapper">';
+               html += '<div class="work_wrapper_padding">';
+               html += '<h6 class="text-white">' + posts[i].maintags + '</h6>' ; 
+               html += '<h5 class="text-white">' + posts[i].title + '</h5>' ; 
+               html += '<a href="{{site.baseurl}} '+posts[i].link+ '">'; 
+               html += '<img src="{{site.baseurl}}'+posts[i].img +'" class="img-fluid" alt=" '+posts[i].alt+'">';
+               html += '</a>'
+               html += '</div>';
+               html += '</div>';
+               html += '</a>'
+               html += '</li>';
+               return html;
+         }
+    });  
+    </script>  
+
+
+  {% include scripts.html %}
+
+
+  {% include footer.html %}
+  </body>
+
+</html> 

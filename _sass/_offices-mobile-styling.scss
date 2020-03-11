@@ -1,0 +1,83 @@
+/*************
+MEDIA QUERIES
+*************/
+@media (min-width: 1200px){
+    // .our_offices{
+    //     .office_alignment{
+    //         max-width: 1185px;
+    //     }
+    // }
+    
+}
+@media (max-width: 1199.98px) {
+    // .our_offices{
+    //     .office_alignment{
+    //         max-width: 950px;
+    //     }
+    // }
+}
+
+@media (max-width: 991.98px) {
+    // .our_offices{
+    //     .office_alignment{
+    //         max-width: 700px;
+    //     }
+    // }
+
+}
+
+@media (max-width: 767.98px) {
+    // .our_offices{
+    //     .office_alignment{
+    //         max-width: 520px;
+    //     }
+    // }
+
+    .our_offices{
+        border-bottom: none;
+        .office_alignment{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .office_address{
+                flex-basis: 100%;
+                margin-bottom: 40px;
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .telephone_number{
+                    a{
+                        font-size: 18px;	
+                    }
+                }
+            }
+            .office_map{
+                flex-basis: 100%;
+                iframe{
+                    min-height: 350px;
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (max-width: 575.98px) {
+    .our_offices{
+        .office_alignment{
+            .office_address{
+                flex-basis: 80%;
+                margin: 0 auto;
+            }
+            .office_map{
+                margin-top: 40px;
+                iframe{
+                    min-height: 230px;
+                }
+            }
+        }
+    }
+}

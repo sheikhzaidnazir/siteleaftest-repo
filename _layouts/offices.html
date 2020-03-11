@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+  <body>
+    <section id="single_page_banner" style="background-image: url({{site.baseurl}}{{ page.banner-image }});">
+      {% include header.html %}
+      <div class="banner_outer_wrapper d-flex align-items-center" > 
+        <div class="container container-lg">
+          <div class="row">
+            <div class="banner_inner_wrapper col-md-7 col-lg-7">
+              <div class="banner_alignment d-flex  align-items-center">
+                <div class="banner_left">
+                  <h6 class="text-white">{{page.banner-top-heading}}</h6>
+                  <h1 class="text-white">{{page.banner-heading}}</h1>
+                  <h6 class="text-white">{{page.banner-subheading}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div> 
+    </section> 
+
+    <!-- <iframe src="https://snazzymaps.com/embed/223540" width="100%" height="600px" style="border:none;"></iframe> -->
+    {% if page.is-office-1 %} 
+    <section class="our_offices p_b_100 p_t_100 p_m_t_50 p_m_b_50">
+      <div class="container">
+        <div class="row">
+          <div class="col p-0">
+            <div class="office_alignment d-flex">
+              <div class="office_address">
+                <h3>{{ page.office-1-heading }}</h3>
+                  {{ page.office-1-description | markdownify }}
+                  <div class="telephone_number">
+                    <img src="{{site.baseurl}}/images/telephone.svg" alt="telephone.svg" class="img-fluid">
+                      <a href="tel:{{page.office-1-number}}">
+                        {{page.office-1-number}}
+                      </a>
+                  </div>
+              </div>
+              <div class="office_map">
+                  <!-- {{ page.office-1-iframe }} -->
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d756.090162875216!2d-74.0105925!3d40.7100765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af73840a6f%3A0x285189b097b7a312!2sDOOR3%20Business%20Applications!5e0!3m2!1sen!2sin!4v1583304441625!5m2!1sen!2sin" width="auto" height="auto" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                  <!-- <iframe src="https://snazzymaps.com/embed/223540" width="100%" height="600px" style="border:none;"></iframe> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.is-office-2 %} 
+    <section class="our_offices p_b_100 p_t_100 p_m_t_10 p_m_b_50">
+      <div class="container">
+        <div class="row">
+          <div class="col p-0">
+            <div class="office_alignment d-flex">
+              <div class="office_address">
+                <h3>{{ page.office-2-heading }}</h3>
+                  {{ page.office-2-description | markdownify }}
+                  <div class="telephone_number">
+                    <img src="{{site.baseurl}}/images/telephone.svg" alt="telephone.svg" class="img-fluid">
+                      <a href="tel:{{page.office-2-number}}">
+                        {{page.office-2-number}}
+                      </a>
+                  </div>
+              </div>
+              <div class="office_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d756.090162875216!2d-74.0105925!3d40.7100765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af73840a6f%3A0x285189b097b7a312!2sDOOR3%20Business%20Applications!5e0!3m2!1sen!2sin!4v1583304441625!5m2!1sen!2sin" width="auto" height="auto" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                  <!-- {{ page.office-2-iframe }} -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+
+    <section id="main_services" class="p_t_100 p_b_100 p_m_t_50 p_m_b_50">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h3 class="p_m_b_70">{{ page.services-heading }}</h3>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <ul class="services_list">
+              {% if page.is-service-1 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                  <h4>{{ page.services-1-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-1-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-2 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-2-link }}">
+                  <h4>{{ page.services-2-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-2-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %}
+              {% if page.is-service-3 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-3-link }}">
+                  <h4>{{ page.services-3-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-3-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-4 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-4-link }}">
+                  <h4>{{ page.services-4-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-4-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-5 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-5-link }}">
+                  <h4>{{ page.services-5-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-5-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="hp_form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-white"> {{ page.form-heading }} </h2>
+            <h5 class="text-white">{{ page.form-subheading }}</h5>
+          </div>
+          <div class="col-md-6">
+            <!-- <div id="leadgen_form">
+                <script type="text/javascript" src="https://forms.dev-leadgen.apexure.org/js/lf.min.js/1d95eef1-658e-4052-ab1c-217faa3f4f66" async></script><div id="leadgen-form-wrap-1d95eef1-658e-4052-ab1c-217faa3f4f66" style="display:block;border:0;width:100%;max-width:100%;margin:0 auto;"><leadgen-form-1d95eef1-658e-4052-ab1c-217faa3f4f66></leadgen-form-1d95eef1-658e-4052-ab1c-217faa3f4f66></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  {% include scripts.html %}
+  {% include footer.html %}
+  </body>
+
+</html> 

@@ -1,0 +1,18 @@
+---
+---
+
+[
+  
+  {% assign work = site.work  | sort: 'date' | reverse  %}
+    {% for work in site.work %}
+    {
+      "title"    : "{{ work.title }}",
+      "link"     : "{{ work.work-link }}",
+      "img"      :  "{{ work.image }}",
+      "alt"      :  "{{ work.image-alt-title }}",
+      "maintags" : "{{ work.work-tags }}"
+
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]

@@ -1,0 +1,73 @@
+/*************
+MEDIA QUERIES
+*************/
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+
+    #leadership{
+        .leadership_wrapper{
+            padding-top: 30px;
+        }
+    }
+
+    #leadership_secondary{
+        .leadership_wrapper{
+            .team{
+                flex-basis: 45%;
+                padding-bottom: 30px;
+                p{
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    #leadership{
+        .leadership_wrapper{
+            li{
+                padding-bottom: 50px;
+            }
+            .team{
+                .team_left{
+                    flex-basis: 100%;
+                    img{
+                        margin-bottom: 25px;
+                    }
+                }
+                .team_right{
+                    flex-basis: 100%;
+                    .social_link {
+                        margin-top: 15px;
+                    }
+                    p{
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    #leadership_secondary{
+        .leadership_wrapper{
+            .team{
+                flex-basis: 100%;
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+
+}
+
+
+
+@media (max-width: 575.98px) {
+
+}

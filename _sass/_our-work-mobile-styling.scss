@@ -1,0 +1,291 @@
+/*************
+MEDIA QUERIES
+*************/
+@media (max-width: 1199.98px) {
+    #work_testimonial{
+        padding: 30px  0;
+        .testimonial_wrapper{
+            .testimonial_content{
+                h3{
+                    font-size: 26px;
+                    line-height: 34px;
+                }
+            }
+            .testimonial_by{
+                p{
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+    #our_work{
+        .top_content{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    #our_work{
+        #ul_large_left{
+            li{
+                float: none;
+                width: 100%;
+                margin-bottom: 25px;
+                .work_wrapper_padding{
+                    padding-top: 10%;
+                    padding-left: 20%;  
+                    h6{
+                        padding-bottom: 20px;
+                        padding-right: 20px;
+                    }
+                    h5{
+                        width: 85%;
+                        font-size: 30px;
+                        line-height: 38px;
+                        padding-bottom: 20px;
+                    }              
+                }
+                &:first-child{
+                    width: 100%;
+                    margin-right: 0%;
+                    .work_wrapper_padding{
+                        padding-top: 10%;
+                        padding-left: 20%;                    
+                        h6{
+                            padding-bottom: 20px;
+                            padding-right: 20px;
+                        }
+                        h5{
+                            width: 85%;
+                            font-size: 30px;
+                            line-height: 38px;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        #ul_large_right{
+            li{
+                float: none;
+                width: 100%;
+                margin-bottom: 25px;
+                .work_wrapper_padding{
+                    padding-top: 10%;
+                    padding-left: 20%;  
+                    h6{
+                        padding-bottom: 20px;
+                        padding-right: 20px;
+                    }
+                    h5{
+                        width: 85%;
+                        font-size: 30px;
+                        line-height: 38px;
+                        padding-bottom: 20px;
+                    }              
+                }
+                &:first-child{
+                    width: 100%;
+                    margin-right: 0%;
+                    margin-left: 0;
+                    .work_wrapper_padding{
+                        padding-top: 10%;
+                        padding-left: 20%;                    
+                        h6{
+                            padding-bottom: 20px;
+                            padding-right: 20px;
+                        }
+                        h5{
+                            width: 85%;
+                            font-size: 30px;
+                            line-height: 38px;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        #ul_equal{
+            margin-bottom: 0;
+            justify-content: space-evenly;
+            li{
+                flex-basis: 48%;
+                &:nth-of-type(3n+2){
+                    margin-right:  0%;
+                    margin-left:  0%;
+                }
+                .work_wrapper_padding{
+                    padding-top: 25px;
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    #work_testimonial{
+        padding: 60px 0;
+        .testimonial_wrapper{
+            .testimonial_content{
+                flex-basis: 100%;
+                h3{
+                    font-size: 24px;
+                    line-height: 33px;
+                    padding-bottom: 20px;
+                }
+            }
+            .testimonial_by{
+                flex-basis: 100%;
+                p{
+                    font-size: 16px;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+    #our_work{
+        #ul_large_left{
+            li{
+                .work_wrapper_padding{
+                    padding-top: 10%;
+                    padding-left: 10%;  
+                    h5{
+                        width: 95%;
+                    }              
+                }
+                &:first-child{
+                    .work_wrapper_padding{
+                        padding-top: 10%;
+                        padding-left: 10%;                    
+                        h5{
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+        #ul_large_right{
+            li{
+                .work_wrapper_padding{
+                    padding-top: 10%;
+                    padding-left: 10%;  
+                    h5{
+                        width: 95%;
+                    }              
+                }
+                &:first-child{
+                    .work_wrapper_padding{
+                        padding-top: 10%;
+                        padding-left: 10%;                    
+                        h5{
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+        #ul_equal{
+            li{
+                flex-basis: 48%;
+                .work_wrapper_padding{
+                    padding-top: 25px;
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 575.98px) {
+    #our_work{
+        padding-bottom: 0;
+        .top_content{
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #ul_large_left{
+            li{
+                margin-bottom: 0;
+                .work_wrapper_padding{
+                    padding-top: 30px;
+                    padding-left: 30px;  
+                    h5{
+                        width: 90%;
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }    
+                    h6{
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }          
+                }
+                &:first-child{
+                    .work_wrapper_padding{
+                        padding-top: 30px;
+                        padding-left: 30px;                    
+                        h5{
+                            width: 95%;
+                            font-size: 16px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+        #ul_large_right{
+            li{
+                margin-bottom: 0;
+                .work_wrapper_padding{
+                    padding-top: 30px;
+                    padding-left: 30px;   
+                    h5{
+                        width: 95%;
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                    h6{
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }               
+                }
+                &:first-child{
+                    .work_wrapper_padding{
+                        padding-top: 30px;
+                        padding-left: 30px;                     
+                        h5{
+                            width: 95%;
+                            font-size: 16px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+        #ul_equal{
+            li{
+                margin-bottom: 0;
+                flex-basis: 100%;
+                h6{
+                    font-size: 16px;
+                    line-height: 1.5;
+                } 
+                h5{
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+                .work_wrapper_padding{
+                    padding-top: 25px;
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+}

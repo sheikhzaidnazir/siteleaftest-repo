@@ -1,0 +1,17 @@
+<section id="our_clients">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="d-flex justify-content-center flex-wrap p_b_30 p_t_30">
+            {% assign clients = site.clients %}
+                {% for clients in site.clients  %}
+                  <li class="our_clients_images p_b_30 p_t_30">
+                    <img src="{{site.baseurl}}{{ clients.image }}" alt="{{ clients.image-alt-title }}" class="img-fluid" title="{{ clients.image-alt-title }}" >
+                  </li>
+               {% endfor %}
+          </ul> 
+        </div>
+      </div>
+         
+    </div>
+  </section>

@@ -1,0 +1,30 @@
+<!-- Your Basic Site Informations -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta name="author" content="">
+<!-- //FOR NOT INDEXING IN THE GOOGLE -->
+    <meta name="robots" content="noindex">
+<!-- //FOR NOT INDEXING IN THE GOOGLE -->
+<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<!-- Mobile Specific Meta -->
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta name="keywords" content="{% if page.meta-keywords %}{{ page.meta-keywords }}{% else %}{{ site.keywords }}{% endif %}">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<base href="/" />
+<!-- Standard Favicon -->
+<link rel="icon" type="image/x-icon" href="{{site.baseurl}}/images/favicon.ico" />
+<!-- Stylesheets -->
+<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
+
+
+
+<!-- End Google Tag Manager -->
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+

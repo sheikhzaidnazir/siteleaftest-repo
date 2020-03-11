@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+  <body>
+    <section id="single_page_banner" style="background-image: url({{site.baseurl}}{{ page.banner-image }});">
+        {% include header.html %}
+        <div class="banner_outer_wrapper d-flex align-items-center" > 
+          <div class="container container-lg">
+            <div class="row">
+              <div class="banner_inner_wrapper col-md-12 col-lg-7">
+                <div class="banner_alignment d-flex  align-items-center">
+                  <div class="banner_left">
+                    <h6 class="text-white">{{page.banner-top-heading}}</h6>
+                    <h1 class="text-white">{{page.banner-heading}}</h1>
+                    <h6 class="text-white">{{page.banner-subheading}}</h6>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </div> 
+    </section> 
+
+
+    <section id="case_study" class="p_t_100 p_b_100 p_m_t_50 p_m_b_50">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="main_wrapper d-flex">
+                        <div class="wrapper_left">
+                            <h6>{{ page.case-study-top-heading }}</h6>
+                            <h3>{{ page.case-study-heading }}</h3>
+                        </div>
+                        <div class="wrapper_right">
+                            <div class="case_study_content">
+                                {{page.case-study-description | markdownify}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case_study_image p_t_50 p_m_t_30">
+                        <img src="{{site.baseurl}}{{page.case-study-image}}" alt="{{page.case-study-image-alt}}" class="img-fluid">
+                        <h6>{{ page.case-study-below-image-heading }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="our_challenge" class="p_t_100 p_b_0 p_m_t_50 p_m_b_0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="main_wrapper d-flex">
+                        <div class="wrapper_left">
+                            <h6>{{ page.challenge-top-heading }}</h6>
+                            <h3>{{ page.challenge-heading }}</h3>
+                        </div>
+                        <div class="wrapper_right">
+                            <div class="challenge_content">
+                                {{page.challenge-description | markdownify}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="challenge_bottom_wrapper p_t_50 p_m_t_30  d-flex">
+                        <div class="left_content">
+                            <h6>{{ page.challenge-below-image-heading }}</h6>
+                        </div>
+                        <div class="right_image">
+                            <img src="{{site.baseurl}}{{page.challenge-image}}" alt="{{page.challenge-image-alt}}" class="img-fluid">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="our_solution" class="p_t_90 p_b_90 p_m_t_50 p_m_b_50">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="main_wrapper d-flex">
+              <div class="wrapper_left">
+                <h6>{{ page.our-solution-top-heading }}</h6>
+                <h3>{{page.our-solution-heading}}</h3>
+              </div>
+              <div class="wrapper_right">
+                <div class="our_solution_content">
+                  {{page.our-solution-description | markdownify}}
+                </div>
+              </div>
+            </div>
+            <div class="solution_image_wrapper hide_on_mobile">
+               <h6>{{page.solution-top-text}}</h6> 
+               <div class="solution_image">
+                   <div class="overlay"></div>
+                   <img src="{{site.baseurl}}{{page.solution-image}}" alt="{{page.solution-image-alt}}" class="img-fluid">
+                    <h2 class="text-white">
+                        {{page.solution-overlay-text}}
+                    </h2>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="solution_image_mobile" class="show_from_mobile" style="background-image: url({{site.baseurl}}{{ page.solution-image }});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-white">
+                        {{page.solution-overlay-text}}
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion" class="p_t_100 p_b_100 p_m_t_50 p_m_b_50">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="main_wrapper d-flex">
+                        <div class="wrapper_left">
+                            <h6>{{ page.conclusion-top-heading }}</h6>
+                            <h3>{{ page.conclusion-heading }}</h3>
+                        </div>
+                        <div class="wrapper_right">
+                            <div class="conclusion_content">
+                                {{page.conclusion-description | markdownify}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="hp_form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-white"> {{ page.form-heading }} </h2>
+            <h5 class="text-white">{{ page.form-subheading }}</h5>
+          </div>
+          <div class="col-md-6">
+            {% assign i = 0 %}
+            {% for mega-guide-repeat-description in page.mega-guide-repeat-description %}
+                {% assign i = i | plus:1 %}
+                <div class="">
+                  <div class="center_content">
+                     <p>{{ mega-guide-repeat-description | markdownify }} </p>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  {% include scripts.html %}
+  {% include footer.html %}
+  </body>
+
+</html> 

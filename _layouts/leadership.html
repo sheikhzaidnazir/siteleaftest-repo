@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+  <body>
+    <section id="page_banner_white_header" >
+      {% include header.html %}
+      <div class="banner_outer_wrapper d-flex align-items-center" style="background-image: url({{site.baseurl}}{{ page.banner-image }});"> 
+        <div class="container container-lg">
+          <div class="row">
+            <div class="banner_inner_wrapper col-md-6 col-lg-6">
+              <div class="banner_alignment d-flex  align-items-center">
+                <div class="banner_left">
+                  <h6 class="text-white">{{page.banner-top-heading}}</h6>
+                  <h1 class="text-white">{{page.banner-heading}}</h1>
+                  <h6 class="text-white">{{page.banner-subheading}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div> 
+    </section> 
+    <section id="banner_mobile" class="show_from_mobile">
+        <div class="container-fluid">
+          <div class="row">
+            <img src="{{site.baseurl}}{{page.banner-mobile-image}}" alt="{{page.banner-image-alt}}" class="img-fluid">
+          </div>
+        </div>
+    </section> 
+
+    <section id="leadership" class="p_t_100 p_b_100 p_m_b_50 p_m_t_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <h3>{{ page.leadership-heading }}</h3>
+                </div>
+                <div class="col-md-12 col-lg-8">
+                    <ul class="leadership_wrapper">
+                        {% assign team = site.team %}
+                            {% for team in site.team  %}
+                            {% if team.tags contains 'leadership' %}
+                              <li class="team d-flex">
+                                <div class="team_left">
+                                    <img src="{{site.baseurl}}{{ team.image }}" alt="{{ team.image-alt-title }}" class="img-fluid" title="{{ team.image-alt-title }}" >
+                                </div>
+                                <div class="team_right">
+                                   <h5 class="title">{{team.title}}</h5> 
+                                   <h5>{{team.role}}</h5> 
+                                    {% if team.is-description-visible %}
+                                        {{ team.description | markdownify }}
+                                    {% endif %} 
+
+                                    {% if team.is-email-link-visible %}  
+                                        <div class="social_link">
+                                            <img src="{{site.baseurl}}/images/icon-mail.svg" alt="mail-icon" class="img-fluid">
+                                            <a href="mailto:{{ team.email-link }}">
+                                                {{ team.email-link }}
+                                            </a>
+                                        </div>
+                                    {% endif %}
+
+                                    {% if team.is-linkedin-link-visible %}  
+                                        <div class="social_link">
+                                            <img src="{{site.baseurl}}/images/icon-linkedin.svg" alt="icon-linkedin" class="img-fluid">
+                                            <a href="{{ team.linkedin-link }}" target="blank">
+                                                {{ team.linkedin-link }}
+                                            </a>
+                                        </div>
+                                    {% endif %}
+
+                                    
+
+                                </div>
+                              </li>
+                             {% endif %} 
+                           {% endfor %}
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership_secondary" class="p_t_90">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="leadership_wrapper">
+                        {% assign team = site.team %}
+                            {% for team in site.team  %}
+                            {% if team.tags contains 'team' %}
+                              <li class="team">
+                                <img src="{{site.baseurl}}{{ team.image }}" alt="{{ team.image-alt-title }}" class="img-fluid" title="{{ team.image-alt-title }}" >
+                                <h5 class="title">{{team.title}}</h5> 
+                                <h5>{{team.role}}</h5> 
+                                <!-- {% if team.is-description-visible %}
+                                    {{ team.description | markdownify }}
+                                {% endif %}  -->
+
+                                {% if team.is-email-link-visible %}  
+                                    <div class="social_link">
+                                        <img src="{{site.baseurl}}/images/icon-mail.svg" alt="mail-icon" class="img-fluid">
+                                        <a href="mailto:{{ team.email-link }}" >
+                                            {{ team.email-link }}
+                                        </a>
+                                    </div>
+                                {% endif %}
+
+                                <!-- {% if team.is-linkedin-link-visible %}  
+                                    <div class="social_link">
+                                        <img src="{{site.baseurl}}/images/icon-linkedin.svg" alt="icon-linkedin" class="img-fluid">
+                                        <a href="{{ team.linkedin-link }}" target="blank">
+                                            {{ team.linkedin-link }}
+                                        </a>
+                                    </div>
+                                {% endif %} -->
+                              </li>
+                             {% endif %} 
+                           {% endfor %}
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section id="main_services" class="p_t_100 p_b_100 p_m_t_50 p_m_b_50">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h3 class="p_m_b_70">{{ page.services-heading }}</h3>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <ul class="services_list">
+              {% if page.is-service-1 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                  <h4>{{ page.services-1-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-1-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-2 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-2-link }}">
+                  <h4>{{ page.services-2-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-2-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %}
+              {% if page.is-service-3 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-3-link }}">
+                  <h4>{{ page.services-3-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-3-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-4 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-4-link }}">
+                  <h4>{{ page.services-4-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-4-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+              {% if page.is-service-5 %} 
+              <li>
+                <a href="{{site.baseurl}}{{ page.services-5-link }}">
+                  <h4>{{ page.services-5-heading }}</h4>
+                  <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid hide_on_tab">
+                </a>
+                {{ page.services-5-description | markdownify }}
+                <div class="show_from_tab">
+                  <a href="{{site.baseurl}}{{ page.services-1-link }}">
+                    <img src="{{site.baseurl}}/images/arrow-right-blue.svg" alt="door-3-arrow-right-blue" class="img-fluid ">
+                  </a>
+                </div>
+              </li>
+              {% endif %} 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="hp_form">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-white"> {{ page.form-heading }} </h2>
+            <h5 class="text-white">{{ page.form-subheading }}</h5>
+          </div>
+          <div class="col-md-6">
+            {% assign i = 0 %}
+            {% for mega-guide-repeat-description in page.mega-guide-repeat-description %}
+                {% assign i = i | plus:1 %}
+                <div class="">
+                  <div class="center_content">
+                     <p>{{ mega-guide-repeat-description | markdownify }} </p>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  {% include scripts.html %}
+  {% include footer.html %}
+  </body>
+
+</html> 
