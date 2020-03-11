@@ -3,7 +3,7 @@
 
 [
   
-  {% assign work = site.work  | sort: 'date' | reverse  %}
+  {% assign work = site.work   %}
     {% for work in site.work %}
     {
       "title"    : "{{ work.title }}",
