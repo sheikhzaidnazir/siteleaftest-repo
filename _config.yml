@@ -2,9 +2,89 @@
 title: Siteleaftest Repo
 timezone: UTC
 collections:
+  clients:
+    title: Our Clients
+    output: true
+  team:
+    title: Our Team
+    output: true
+  work:
+    title: Our Work
+    output: true
   posts:
     title: Posts
     output: true
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: team
+  values:
+    layout: leadership
+    title: 
+    is-description-visible:
+    description: 
+    image: 
+    is-linkedin-link-visible: 
+    is-email-link-visible: 
+    linkedin-link: 
+    role: 
+    email-link:
+    tags:  
+- scope:
+    path: ''
+    type: clients
+  values:
+    layout: homepage
+    title: 
+    image: 
+    alt:  
+- scope:
+    path: ''
+    type: work
+  values:
+    layout: our-work
+    title: 
+    image: 
+    image-alt-title: 
+    work-tags:
+    work-link:
+- scope:
+    path: ''
+    type: posts
+  values:
+    author: 
+    featured-image: 
+    featured-image-alt: 
+    take-away-image: 
+    take-away-image-alt: 
+    author-image: 
+    facebook-link: 
+    instagram-link: 
+    twitter-link: 
+    author-description: 
+    comments: 
+    meta-keywords: 
+email: infra@apexure.com
+description: Door3 is a digital design, development, and strategy company that solves problems by combining the in-depth knowledge of our clients with our award-winning designers, elite developers and comprehensive strategists.
+baseurl: '/siteleaftest-repo/'
+url: 
+permalink: "/blog/:title"
+markdown: kramdown
+theme: minima
+social:
+  name: DOOR3
+  links:
+  - https://twitter.com/#!/door3
+  - https://instagram.com/door3
+  - https://www.facebook.com/DOOR3/
+  - https://www.linkedin.com/company/259276
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+- jekyll-feed
+- jekyll-redirect-from
+- jekyll-seo-tag
