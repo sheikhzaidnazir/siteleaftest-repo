@@ -5,6 +5,9 @@ collections:
   clients:
     title: Our Clients
     output: true
+  authors:
+    title: Authors
+    output: true
   team:
     title: Our Team
     output: true
@@ -24,15 +27,15 @@ defaults:
   values:
     layout: leadership
     title: 
-    is-description-visible: 
+    is-description-visible:
     description: 
     image: 
     is-linkedin-link-visible: 
     is-email-link-visible: 
     linkedin-link: 
     role: 
-    email-link: 
-    tags: 
+    email-link:
+    tags:  
 - scope:
     path: ''
     type: clients
@@ -40,7 +43,7 @@ defaults:
     layout: homepage
     title: 
     image: 
-    alt: 
+    alt:  
 - scope:
     path: ''
     type: work
@@ -49,22 +52,24 @@ defaults:
     title: 
     image: 
     image-alt-title: 
-    work-tags: 
-    work-link: 
+    work-tags:
+    work-link:
+- scope:
+    path: ''
+    type: authors
+  values:
+    title:
+    layout: author
+    image:
+    description:
 - scope:
     path: ''
     type: posts
   values:
-    author: 
     featured-image: 
     featured-image-alt: 
     take-away-image: 
     take-away-image-alt: 
-    author-image: 
-    facebook-link: 
-    instagram-link: 
-    twitter-link: 
-    author-description: 
     comments: 
     meta-keywords: 
 email: infra@apexure.com
